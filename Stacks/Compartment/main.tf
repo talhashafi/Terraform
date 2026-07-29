@@ -14,6 +14,5 @@ resource "oci_identity_compartment" "compartments_group" {
   for_each = toset(local.compartments)
 
   name           = each.value
-  compartment_id = compartment00.id
-
+  compartment_id = oci_identity_compartment.compartment00.id
 }
