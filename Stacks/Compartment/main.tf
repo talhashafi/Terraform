@@ -15,4 +15,5 @@ resource "oci_identity_compartment" "compartments_group" {
 
   name           = each.value
   compartment_id = oci_identity_compartment.compartment00.id
+  description = "creating compartment- ${each.value}"
 }
