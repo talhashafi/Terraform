@@ -3,17 +3,17 @@ variable "tenancy_ocid" {
 }
 
 variable "compute" {
-    default = compute
+    default = "compute"
 }
 
 variable "application" {
-    default = application
+    default = "application"
 }
 
 variable "networks" {
-    default = networks
+    default = "networks"
 }
 
 variable "security" {
-    default = security
+    default = "security"
 }
