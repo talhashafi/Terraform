@@ -3,17 +3,17 @@ variable "tenancy_ocid" {
 }
 
 variable "compute" {
-    default = "compute"
+    default = "testcompartment:compute"
 }
 
 variable "application" {
-    default = "application"
+    default = "testcompartment:application"
 }
 
 variable "networks" {
-    default = "networks"
+    default = "testcompartment:networks"
 }
 
 variable "security" {
-    default = "security"
+    default = "testcompartment:security"
 }
