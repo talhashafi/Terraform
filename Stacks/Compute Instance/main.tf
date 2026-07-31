@@ -18,9 +18,9 @@ resource "oci_core_instance" "always_free_vm" {
   }
 
   source_details {
-    source_type = "image"
-    source_id   = var.oracle_linux_image_ocid
-  }
+  source_type = "image"
+  source_id   = data.oci_core_images.oracle_linux.images[0].id
+}
 
   metadata = {
     ssh_authorized_keys = file("~/.ssh/id_rsa.pub")
@@ -85,3 +85,4 @@ resource "oci_core_subnet" "public_subnet" {
 
   display_name = "public-subnet"
 }
+
