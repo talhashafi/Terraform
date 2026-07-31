@@ -1,5 +1,5 @@
 locals {
-  compartments = ["compartment01", "compartment02", "compartment03", "compartment04"]
+  compartments = ["compute", "application", "networks", "security"]
 }
 
 resource "oci_identity_compartment" "compartment00" {
