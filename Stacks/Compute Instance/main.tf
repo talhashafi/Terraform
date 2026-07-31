@@ -18,13 +18,11 @@ resource "oci_core_instance" "always_free_vm" {
   }
 
   source_details {
-  source_type = "image"
-  source_id   = data.oci_core_images.oracle_linux.images[0].id
-}
-
-  metadata = {
-    ssh_authorized_keys = file("~/.ssh/id_rsa.pub")
+    source_type = "image"
+    source_id   = data.oci_core_images.oracle_linux.images[0].id
   }
+
+  metadata = { ssh_authorized_keys = var.ssh_public_key }
 }
 
 resource "oci_core_vcn" "main" {
