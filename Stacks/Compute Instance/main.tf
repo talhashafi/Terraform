@@ -1,6 +1,6 @@
 
 resource "oci_core_instance" "always_free_vm" {
-  availability_domain = data.oci_identity_availability_domains.ads.availability_domains[0].name
+  availability_domain = data.oci_identity_availability_domains.ads.availability_domains[1].name
   compartment_id      = var.compartment_ocid
   display_name        = "always-free-vm"
 
@@ -8,7 +8,7 @@ resource "oci_core_instance" "always_free_vm" {
 
   shape_config {
     ocpus         = 1
-    memory_in_gbs = 6
+    memory_in_gbs = 2
   }
 
   create_vnic_details {
